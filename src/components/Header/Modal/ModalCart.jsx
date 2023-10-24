@@ -1,6 +1,8 @@
+import { useCart } from "@/Context/useContext";
 import { Button } from "@/components/Button/Button";
 
 export const ModalCart = () => {
+  const { cart } = useCart();
   return (
     <div
       className="md:w-96 min-h-60
@@ -15,8 +17,14 @@ export const ModalCart = () => {
         <h3 className="text-base font-bold">Cart</h3>
       </div>
 
-      <div>conteudo</div>
-      <Button>Checkout</Button>
+      {cart ? (
+        <div>
+          <h3>{cart.price}</h3>
+          <Button>Checkout</Button>
+        </div>
+      ) : (
+        <p className="text-center text-slate-500 text-lg">Your cart is empty.</p>
+      )}
     </div>
   );
 };

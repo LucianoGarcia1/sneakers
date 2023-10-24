@@ -38,8 +38,7 @@ export const Header = () => {
           <Image
             src={menu === "hidden" ? Menu : Close}
             alt="menu"
-            className="w-4 h-4 transition duration-75 ease-in"
-            priority
+            className="w-4 h-auto transition duration-75 ease-in"
           />
         </button>
 
@@ -56,27 +55,42 @@ export const Header = () => {
           `}
         >
           <li>
-            <Link href="#" className="md:text-slate-500 text-white">
+            <Link
+              href="#"
+              className="md:text-slate-500 hover:text-zinc-900 text-white"
+            >
               Collections
             </Link>
           </li>
           <li>
-            <Link href="#" className="md:text-slate-500 text-white">
+            <Link
+              href="#"
+              className="md:text-slate-500 hover:text-zinc-900 text-white"
+            >
               Men
             </Link>
           </li>
           <li>
-            <Link href="#" className="md:text-slate-500 text-white">
+            <Link
+              href="#"
+              className="md:text-slate-500 hover:text-zinc-900 text-white"
+            >
               Wormen
             </Link>
           </li>
           <li>
-            <Link href="#" className="md:text-slate-500 text-white">
+            <Link
+              href="#"
+              className="md:text-slate-500 hover:text-zinc-900 text-white"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="#" className="md:text-slate-500 text-white">
+            <Link
+              href="#"
+              className="md:text-slate-500 hover:text-zinc-900  text-white"
+            >
               Contact
             </Link>
           </li>
@@ -85,17 +99,12 @@ export const Header = () => {
 
       <div className="flex justify-center items-center md:gap-12 gap-6">
         <button type="button" onClick={handlehover}>
-          <Image
-            src={Cart}
-            alt="Cart"
-            className="w-5 h-5"
-          />
+          <Image src={Cart} alt="Cart" className="w-5 h-auto" />
         </button>
         <Image
           src={Profile}
           alt="Profile"
           className="w-8 h-8 md:w-10 md:h-10"
-          priority
         />
       </div>
 
